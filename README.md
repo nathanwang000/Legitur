@@ -5,4 +5,4 @@ A reading web application that support user to create books to read, discuss boo
 
 Visit [HERE](http://legitur.herokuapp.com/ "Legitur") to access the website
 
-Hao is here!
+
