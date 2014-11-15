@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
 
 {% block head %}
 {{ super() }}
@@ -25,29 +24,28 @@
 <!-- 2 x 3 layout for subject -->
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-sm-6 col1">
-      <h1>Computer Science</h1>
+    <div class="col-md-4 col-sm-6 col1 text-center">
+      <h1>CompSci</h1>
     </div>
-    <div class="col-md-4 col-sm-6 col2">
+    <div class="col-md-4 col-sm-6 col2 text-center">
       <h1>Mathematics</h1>
     </div>
-    <div class="col-md-4 col-sm-6 col3">
+    <div class="col-md-4 col-sm-6 col3 text-center">
       <h1>Physics</h1>
     </div>
-    <div class="col-md-4 col-sm-6 col4">
+    <div class="col-md-4 col-sm-6 col4 text-center">
       <h1>Chemistry</h1>
     </div>
-    <div class="col-md-4 col-sm-6 col5">
+    <div class="col-md-4 col-sm-6 col5 text-center">
       <h1>Statistics</h1>
     </div>
-    <div class="col-md-4 col-sm-6 col6">
+    <div class="col-md-4 col-sm-6 col6 text-center">
       <h1>Biology</h1>
     </div>
   </div>
 </div>
 <!-- experiments TOBE DELETED-->
-<!-- {{ wtf.quick_form(form) }} -->
-<!-- <p>The local date and time is {{ moment(current_time).format('LLL') }}.</p> -->
-<!-- <p>That was {{ moment(current_time).fromNow(refresh=True) }}.</p> -->
+<p>{{ moment(current_time).format('LLL') }}.</p>
+<p>That was {{ moment(current_time).fromNow(refresh=True) }}.</p>
 
 {% endblock %}

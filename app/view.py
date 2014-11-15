@@ -10,6 +10,12 @@ Moment(app) ## use moment.js to handle user time
 
 @app.route('/', methods=["GET","POST"])
 def index():
+    return render_template('index.html',
+                           current_time=datetime.utcnow(),
+                           name=session.get("name"))
+
+@app.route('/login', methods=["GET", "POST"])
+def login():
     form=NameForm()
     if request.method == "POST" and form.validate_on_submit():
         old_name = session.get("name")
@@ -17,11 +23,8 @@ def index():
             flash("your name is successfully changed")
         session["name"] = form.name.data
         return redirect(url_for("index"))
-    return render_template('index.html',
-                           current_time=datetime.utcnow(),
-                           form=form,
-                           name=session.get("name"))
-
+    return render_template("signup.html",
+                           form=form)
 @app.route('/user/<name>')
 def user(name):
     return render_template("user.html", name=name)
