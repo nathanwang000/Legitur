@@ -28,7 +28,8 @@
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
 	<li><a href="#">Discussion Board</a></li>
-	<li><a href="/user/Guest">profile</a></li>
+	<li><a href="/user/{% if name %}{{name}}
+		     {% else %}My Friend{% endif %}">Profile</a></li>
 	<li><a href="/login">
 	    {% if guestname %}logout
 	    {% else %}login{% endif %}</a></li>
