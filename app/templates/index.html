@@ -2,12 +2,11 @@
 
 {% block head %}
 {{ super() }}
-<link type="text/css" rel="stylesheet" href="/static/style.css">
 {% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-    <h1>Hello, {% if name %}{{name}}{% else %}Stranger{% endif %}</h1>
+    <h1>Hello, {% if name %}{{name}}{% else %}My Friend{% endif %}</h1>
 </div>
 <!-- main banner -->
 <div class="jumbotron">

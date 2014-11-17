@@ -25,6 +25,7 @@ def login():
         return redirect(url_for("index"))
     return render_template("signup.html",
                            form=form)
+
 @app.route('/user/<name>')
 def user(name):
     return render_template("user.html", name=name)

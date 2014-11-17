@@ -2,5 +2,10 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block page_content %}
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Signup</a></li>
+  <li role="presentation"><a href="#">Login</a></li>
+</ul>
+<br/> <!-- replace me with a style in css -->
 {{ wtf.quick_form(form) }}
 {% endblock %}

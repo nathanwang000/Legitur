@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 # configuration
 basedir = os.path.abspath(os.path.dirname(__file__))
-SQLALCHEMY_DATABASE =\
+SQLALCHEMY_DATABASE_URI =\
     "sqlite:///"+os.path.join(basedir, 'data.sqlite')
-SALALCHEMY_COMMIT_ON_TEARDOWN = True
+SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 DEBUG = True
 SECRET_KEY = 'development key'
 USERNAME = 'admin'
@@ -21,3 +21,4 @@ app.config.from_object(__name__)
 db = SQLAlchemy(app)
 
 from app import view
+from app import model

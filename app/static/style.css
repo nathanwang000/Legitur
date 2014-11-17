@@ -25,3 +25,7 @@
 .col6 {
     background: aqua;
 }
+
+body {
+    padding-top: 70px;
+}
