@@ -21,4 +21,4 @@ app.config.from_object(__name__)
 db = SQLAlchemy(app)
 
 from app import view
-from app import model
+from app import models

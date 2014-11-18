@@ -3,8 +3,14 @@
 
 {% block page_content %}
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Signup</a></li>
-  <li role="presentation"><a href="#">Login</a></li>
+  <li role="presentation"  
+      {% if signup == True%} 
+      class="active" 
+      {% endif %}><a href="/signup">Signup</a></li>
+  <li role="presentation" 
+      {% if signup == False%} 
+      class="active"
+      {% endif %}><a href="/login">Login</a></li>
 </ul>
 <br/> <!-- replace me with a style in css -->
 {{ wtf.quick_form(form) }}
