@@ -356,7 +356,7 @@ What luck for the rulers that men do not think.
 "message passing as the fundamental operation of the OS is just an
 excercise in computer science masturbation. It may feel good, but
 you don't actually get anything DONE."
-    - Linus talking about Micro-Kernels and the EROS OS.
+    -- Linus talking about Micro-Kernels and the EROS OS.
 
 Bad men live that they may eat and drink, whereas good men eat and drink
 that they may live.
@@ -1309,12 +1309,12 @@ but to try to have a few basic concepts.
 So, it’s important for us to acknowledge that we’re prone to be conservative,
 and in turn surround ourselves with individuals who will help break down our
 conservatism.
-	— Shigeru Miyamoto, on designing the Wii controllers
+	-- Shigeru Miyamoto, on designing the Wii controllers
 
 Others inspire us, information feeds us, practice improves our performance,
 but we need quiet time to figure things out, to emerge with new discoveries,
 to unearth original answers.
-   - Dr. Ester Buchholz
+   -- Dr. Ester Buchholz
 
 Politics is the struggle between those who want to make their country
 the best in the world, and those who believe it already is.  Each group
@@ -1322,7 +1322,7 @@ calls the other unpatriotic.
 
 We should be taught not to wait for inspiration to start a thing. Action
 always generates inspiration. Inspiration seldom generates action.
-       — Frank Tibolt
+       -- Frank Tibolt
 
 The world is full of people whose notion of a satisfactory future is,
 in fact, a return to the idealised past.
