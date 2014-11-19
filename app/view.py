@@ -10,13 +10,9 @@ Moment(app) ## use moment.js to handle user time
 
 @app.route('/', methods=["GET","POST"])
 def index():
-    import random
-    from process_quotes import quotes
-    quote_of_the_day = quotes[int(random.random()*len(quotes))]
     return render_template('index.html',
                            current_time=datetime.utcnow(),
-                           name=session.get("name"),
-                           quote = quote_of_the_day)
+                           name=session.get("name"))
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
@@ -60,7 +56,12 @@ def signup():
     
 @app.route('/user/<name>')
 def user(name):
-    return render_template("user.html", name=name)
+    import random
+    from process_quotes import quotes
+    quote_of_the_day = quotes[int(random.random()*len(quotes))]
+
+    return render_template("user.html", name=name,
+                           quote = quote_of_the_day)
 
 @app.errorhandler(404)
 def page_not_found(e):

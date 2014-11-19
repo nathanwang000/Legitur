@@ -1,0 +1,2 @@
+** In adding in the quotes in user file, the following errors occured
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc2 in position 121
