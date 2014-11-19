@@ -18,9 +18,16 @@ def index():
 def login():
     form=NameForm()
     if form.validate_on_submit():
-        old_name = session.get("name")
-        if old_name is not None and old_name != form.name.data:
-            flash("your successfully changed your name")
+        from app.models import User, Role
+        from app import db
+        
+        user = User.query.filter_by(username=form.name.data).first()
+        
+        ## check database to see valid user or not
+        if user is None:
+            flash("user name %s not found" % form.name.data, 'error')
+            return redirect(url_for("login"))  
+        
         session["name"] = form.name.data
         return redirect(url_for("index"))
     return render_template("signup.html",
@@ -30,13 +37,14 @@ def login():
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     form=NameForm()
-    from app.models import User, Role
-    from app import db
     if form.validate_on_submit():
+        from app.models import User, Role
+        from app import db
+
         user = User.query.filter_by(username=form.name.data).first()
         if user is None:
             user = User(username = form.name.data,
-                        role_id = 2)
+                        role_id = 2) ## set user role
             db.session.add(user)
             session["name"] = form.name.data
             flash("successfully registered, %s" % form.name.data)
