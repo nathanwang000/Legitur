@@ -10,9 +10,13 @@ Moment(app) ## use moment.js to handle user time
 
 @app.route('/', methods=["GET","POST"])
 def index():
+    import random
+    from process_quotes import quotes
+    quote_of_the_day = quotes[int(random.random()*len(quotes))]
     return render_template('index.html',
                            current_time=datetime.utcnow(),
-                           name=session.get("name"))
+                           name=session.get("name"),
+                           quote = quote_of_the_day)
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
