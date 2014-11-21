@@ -1,7 +1,7 @@
 #!venv/bin/python
 from app import app, db
 from flask.ext.script import Manager, Shell
-from flask.ext.migrate import Migrate, MigrateCommand
+# from flask.ext.migrate import Migrate, MigrateCommand
 # from flask.ext.mail import Mail
 
 # def make_shell_context():
