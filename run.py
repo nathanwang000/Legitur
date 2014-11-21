@@ -2,7 +2,7 @@
 from app import app, db
 from flask.ext.script import Manager, Shell
 from flask.ext.migrate import Migrate, MigrateCommand
-from flask.ext.mail import Mail
+# from flask.ext.mail import Mail
 
 def make_shell_context():
     from app.models import User, Role
