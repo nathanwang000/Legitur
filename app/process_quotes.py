@@ -1,4 +1,4 @@
-import codecs
+import codecs, re
 f = codecs.getreader("utf-8")(open("quotes.txt"))
 quotes = []
 def process_quotes(f):
@@ -10,7 +10,7 @@ def process_quotes(f):
                            author or "Anonymous"))
             quote = ""
             author = None
-        elif l.find("--") != -1:
+        elif re.match("[ \t]+--", l):
             author = l.split("--")[-1].strip()
         else:
             quote += l
