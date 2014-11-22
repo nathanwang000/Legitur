@@ -1,4 +1,5 @@
-f = open("quotes.txt")
+import codecs
+f = codecs.getreader("utf-8")(open("quotes.txt"))
 quotes = []
 def process_quotes(f):
     quote = ""
